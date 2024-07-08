@@ -1,32 +1,36 @@
 .footer {
   padding: 30px 15px 30px;
   background-color: #484848;
-  color: #fff;
-}
+  color: --bg-color-primary;
 
-.footer__wrapper {
-  display: grid;
-  gap: 30px;
-}
+  &__wrapper {
+    display: grid;
+    gap: 30px;
+  }
+  
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  &__logo img {
+    display: block;
+    width: 216px;
+  }
+  
+  &__dev img {
+   display: block;
+   height: 46px;
+  }
 
-.footer__columns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer__logo img {
-  display: block;
-  width: 216px;
-}
-
-.footer__dev img {
- display: block;
- height: 46px;
+  &__copy {
+    color: $footer-color;
+  }
 }

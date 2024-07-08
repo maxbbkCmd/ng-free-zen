@@ -1,0 +1,35 @@
+.app {
+  &.light {
+    // color:
+    --color-primary: #000;
+    
+    // bg-color:
+    --bg-color-primary: #fff;
+
+    // border-color:
+    --border-color-primary: #aaa;
+
+    //links:
+    --bg-color-links: #222;
+
+    //bg-modal:
+    --bg-color-modal: #fff;
+  }
+  
+  &.dark {
+    // color:
+    --color-primary: #fff;
+    
+    // bg-color:
+    --bg-color-primary: #484848;
+
+    // border-color:
+    --border-color-primary: #fff;
+
+    //links:
+    --bg-color-links: #484848;
+
+    //bg-modal:
+    --bg-color-modal: #fff;
+  }
+}

@@ -1,7 +1,9 @@
-@import 'mixins/mixins.scss';
-@import 'config/reset.scss';
+@import 'mixins/mixins';
+@import 'config/reset';
 @import 'config/fonts';
 @import 'config/global';
+@import 'config/vars';
+@import 'config/theme-vars';
 @import 'features/menu';
 @import 'features/burger';
 @import 'ui/column';
