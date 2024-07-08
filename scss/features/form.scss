@@ -6,7 +6,7 @@
     display: flex;
     position: relative;
     height: 30px;
-    border-bottom: 1px solid $modal-color;;
+    border-bottom: 1px solid $modal-color;
   }
   
   &__field input {
@@ -24,7 +24,7 @@
     left: 5px;
     bottom: 3px;
     font-size: 16px;
-    color: $modal-color;;
+    color: $modal-color;
   }
   
   &__field select {
@@ -50,7 +50,7 @@
     margin-top: 5px;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid $modal-color;;
+    border: 1px solid $modal-color;
     border-radius: 30px;
   }
 }
