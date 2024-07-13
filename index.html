@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>ZEN</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js" type="module"></script>
   </head>
 
   <body>
-    <div class="app light">
+
+    <div class="app light" id="app">
       <header class="header">
         <div class="header__wrapper">
           <button class="header__logo" type="button" id="logo"> 
@@ -21,7 +23,7 @@
               </svg>
           </button>
           <nav class="header__nav">
-            <ul class="menu active" id="menu">
+            <ul class="menu" id="menu" data-menu="menu">
               <!-- item 1 -->
               <li class="menu__item">
                 <a href="#download">Download</a>
@@ -55,7 +57,7 @@
                 <option value="en">RU</option>
               </select>
             </label>
-            <button class="header__theme" type="button" id="theme">
+            <button class="header__theme" type="button" id="theme" data-theme="light">
               <img src="./assets/icon/moon.svg" alt="theme">
             </button>
             <button class="burger" type="button" id="burger">
@@ -339,10 +341,10 @@
         </div>
       </footer>
 
-      <div class="modal" id="modal">
+      <div class="modal" id="modal-order">
         <div class="modal__body">
           <!-- close button -->
-          <button class="modal__close" id="close">
+          <button class="modal__close" id="order-close">
             <img src="assets/icon/close.svg" alt="close">
           </button>
           <!-- Title -->
