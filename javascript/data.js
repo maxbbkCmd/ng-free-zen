@@ -1,7 +1,7 @@
 const download = {
 	title: 'Peaceful shopping mindful money',
 	texts: ['See how we can help with making your shopping experience and money management more ZEN.'],
-	Images: {
+	images: {
 			source: './assets/images/1.jpg',
 			description: 'Bag and device'
 			},
@@ -10,10 +10,10 @@ const download = {
 const warranty = {
 	title: '1-year warranty boost',
 	texts: [
-			'ZEN cards have a very neat feature that will help you        whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
+			'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
 			'When you buy any electronics with your ZEN shopping Mastercard, their warranty gets extended by one year. How does it work? It simply does. Automatically.'
 			],
-	Images: {
+	images: {
 			source: './assets/images/2.jpg',
 			description: 'Basket'
 			},
@@ -26,7 +26,7 @@ const care = {
 			'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
 			'But, here comes ZEN Care: a free, built-in shopping protection.'
 			],
-	Images: {
+	images: {
 			source: './assets/images/3.jpg',
 			description: 'Card'
 			},
@@ -40,5 +40,3 @@ const cashback = {
 			'Up to 14% of what you spend using ZEN Mastercard ® will materialize on your account right after the purchase.'
 			],
 };
-
-
