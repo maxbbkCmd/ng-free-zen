@@ -1,5 +1,4 @@
 const header = {
-  defaultLanguage: 'RU',
   langs: [
     {
       name: 'RU',
