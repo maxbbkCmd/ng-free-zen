@@ -52,18 +52,18 @@ select {
 
 @font-face {
   font-family: "Nunito";
-  src: url("assets/fonts/Nunito/Nunito-Regular.woff2") format("woff2");
-  src: url("assets/fonts/Nunito/Nunito-Regular.woff") format("woff");
-  src: url("assets/fonts/Nunito/Nunito-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/Nunito/Nunito-Regular.woff2") format("woff2");
+  src: url("../../assets/fonts/Nunito/Nunito-Regular.woff") format("woff");
+  src: url("../../assets/fonts/Nunito/Nunito-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("assets/fonts/Nunito/Nunito-Bold.woff2") format("woff2");
-  src: url("assets/fonts/Nunito/Nunito-Bold.woff") format("woff");
-  src: url("assets/fonts/Nunito/Nunito-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/Nunito/Nunito-Bold.woff2") format("woff2");
+  src: url("../../assets/fonts/Nunito/Nunito-Bold.woff") format("woff");
+  src: url("../../assets/fonts/Nunito/Nunito-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: 400;
   font-display: swap;
@@ -104,7 +104,6 @@ img {
 
 .menu {
   display: none;
-  background: var(--bg-color-primary);
 }
 .menu.active {
   display: block;
@@ -112,6 +111,7 @@ img {
   top: 51px;
   left: 0;
   right: 0;
+  background-color: var(--bg-color-primary);
 }
 .menu__item {
   padding: 24px 15px;
@@ -247,6 +247,7 @@ img {
 .header__theme {
   height: 26px;
   width: 26px;
+  color: var(--color-primary);
 }
 
 .download {
@@ -360,7 +361,6 @@ img {
 
 .care {
   padding: 30px 15px;
-  background-color: var(--bg-color-primary);
 }
 .care__wrapper {
   display: flex;
