@@ -1,4 +1,4 @@
-const header = {
+export const primaryInfo = {
   langs: [
     {
       name: 'RU',
@@ -33,7 +33,7 @@ const header = {
   ],
 };
 
-const download = {
+export const download = {
   title: 'Peaceful shopping mindful money',
   texts: [
     'See how we can help with making your shopping experience and money management more ZEN.',
@@ -54,7 +54,7 @@ const download = {
   },
 };
 
-const warranty = {
+export const warranty = {
   title: '1-year warranty boost',
   texts: [
     'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
@@ -66,7 +66,7 @@ const warranty = {
   },
 };
 
-const care = {
+export const care = {
   title: 'ZEN Care',
   texts: [
     "Shopping online is usually a delightful experience. Until it's not.",
@@ -79,7 +79,7 @@ const care = {
   },
 };
 
-const cashback = {
+export const cashback = {
   title: 'and cashback!',
   texts: [
     'It saves a little bit of money while you’re shopping, but in many cases it takes ages to get anything out of it.',
@@ -88,81 +88,112 @@ const cashback = {
   ],
   buttonText: 'Order a consultation',
 };
-1;
-const clients = {
+
+export const clients = {
   brands: [
     {
-      lightSource: '.assets/brands/light/1.svg',
-      darkSource: '.assets/brands/dark/1.svg',
-      description: 'Rosegal',
+      name: 'Rosegal',
+      logo: {
+        lightSource: '.assets/brands/light/1.svg',
+        darkSource: '.assets/brands/dark/1.svg',
+      },
     },
     {
-      lightSource: '.assets/brands/light/2.svg',
-      darkSource: '.assets/brands/dark/2.svg',
-      description: 'Geabest',
+      name: 'Geabest',
+      logo: {
+        lightSource: '.assets/brands/light/2.svg',
+        darkSource: '.assets/brands/dark/2.svg',
+      },
     },
     {
-      lightSource: '.assets/brands/light/3.svg',
-      darkSource: '.assets/brands/dark/3.svg',
-      description: 'Allegro',
+      name: 'Allegro',
+      logo: {
+        lightSource: '.assets/brands/light/3.svg',
+        darkSource: '.assets/brands/dark/3.svg',
+      },
     },
     {
-      lightSource: '.assets/brands/light/4.svg',
-      darkSource: '.assets/brands/dark/4.svg',
-      description: 'Aliexpress',
+      name: 'Aliexpress',
+      logo: {
+        lightSource: '.assets/brands/light/4.svg',
+        darkSource: '.assets/brands/dark/4.svg',
+      },
     },
     {
-      lightSource: '.assets/brands/light/5.svg',
-      darkSource: '.assets/brands/dark/5.svg',
-      description: 'Booking',
+      name: 'Booking',
+      logo: {
+        lightSource: '.assets/brands/light/5.svg',
+        darkSource: '.assets/brands/dark/5.svg',
+      },
     },
     {
-      lightSource: '.assets/brands/light/6.svg',
-      darkSource: '.assets/brands/dark/6.svg',
-      description: 'Media Markt',
+      name: 'Media Markt',
+      logo: {
+        lightSource: '.assets/brands/light/6.svg',
+        darkSource: '.assets/brands/dark/6.svg',
+      },
     },
     {
-      lightSource: '.assets/brands/light/7.svg',
-      darkSource: '.assets/brands/dark/7.svg',
-      description: 'Rtv Euro Agd',
+      name: 'Rtv Euro Agd',
+      logo: {
+        lightSource: '.assets/brands/light/7.svg',
+        darkSource: '.assets/brands/dark/7.svg',
+      },
     },
     {
-      lightSource: '.assets/brands/light/8.svg',
-      darkSource: '.assets/brands/dark/8.svg',
-      description: 'Groupon',
+      name: 'Groupon',
+      logo: {
+        lightSource: '.assets/brands/light/8.svg',
+        darkSource: '.assets/brands/dark/8.svg',
+      },
     },
   ],
 };
 
-const footer = {
-  columns: [
+export const secondaryInfo = {
+  categories: [
     {
-      title: 'Learn',
+      name: 'Learn',
       links: [
         {
-          name: 'Help center',
           url: 'https://example.com',
+          content: {
+            type: 'text',
+            data: 'Help center',
+          },
         },
         {
-          name: 'Join ZEN team',
           url: 'https://example.com',
+          content: {
+            type: 'text',
+            data: 'Join ZEN team',
+          },
         },
         {
-          name: 'Privacy Policy',
           url: 'https://example.com',
+          content: {
+            type: 'text',
+            data: 'Privacy Policy',
+          },
         },
         {
-          name: 'Cookies',
           url: 'https://example.com',
+          content: {
+            type: 'text',
+            data: 'Cookies',
+          },
         },
         {
-          name: 'Terms of use',
           url: 'https://example.com',
+          content: {
+            type: 'text',
+            data: 'Terms of use',
+          },
         },
       ],
     },
     {
-      title: 'Discover',
+      name: 'Discover',
       links: [
         {
           name: 'For developers',
@@ -179,7 +210,7 @@ const footer = {
       ],
     },
     {
-      title: 'Offer',
+      name: 'Offer',
       links: [
         {
           name: 'Business',
@@ -192,7 +223,7 @@ const footer = {
       ],
     },
     {
-      title: 'Language',
+      name: 'Language',
       links: [
         {
           name: 'English',
@@ -205,20 +236,26 @@ const footer = {
       ],
     },
     {
-      title: 'Follow us',
+      name: 'Follow us',
       links: [
         {
           url: 'https://example.com',
-          source: '/assets/icon/in.svg',
+          content: {
+            type: 'image',
+            data: './assets/icon/in.svg',
+          },
         },
       ],
     },
     {
-      title: 'Contact',
+      name: 'Contact',
       links: [
         {
-          name: 'hello@zen.com',
           url: 'mailto:https://example.com',
+          content: {
+            type: 'text',
+            data: 'hello@zen.com',
+          },
         },
       ],
     },
@@ -234,8 +271,10 @@ const footer = {
     ],
     developer: {
       url: 'https://example.com',
-      source: '/assets/icon/developer.svg',
-      description: 'Developer',
+      content: {
+        type: 'image',
+        data: './assets/icon/developer.svg',
+      },
     },
   },
 };
