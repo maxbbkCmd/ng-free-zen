@@ -1,4 +1,4 @@
-type TitleData = {
+export type TitleData = {
     content: string;
     priority: number;
 };
@@ -19,3 +19,4 @@ export type DownloadData = {
   links: LinkData[];
   images: ImageData;
 };
+
