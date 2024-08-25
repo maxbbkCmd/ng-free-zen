@@ -1,3 +1,8 @@
+/**
+ * @function IconLogo
+ * @returns {string} HTML
+ */
+
 export const iconGoogle = () => `
   <svg viewBox="0 0 150 44" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="0.5" y="0.5" width="149" height="43" rx="4.5"/>
