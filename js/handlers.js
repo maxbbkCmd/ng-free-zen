@@ -22,7 +22,7 @@ export const handleThemeBtnClick = (event) => {
     $themeButton.innerHTML = generateMoonIcon();
     $app.classList.add('light');
     $app.classList.remove('dark');
-  };
+  }
 };
 
 // - открытие/закрытие модального окна

@@ -102,10 +102,10 @@ img {
   --bg-color-modal: #fff;
 }
 
-.menu {
+.nav {
   display: none;
 }
-.menu.active {
+.nav.active {
   display: block;
   position: fixed;
   top: 51px;
@@ -113,7 +113,7 @@ img {
   right: 0;
   background-color: var(--bg-color-primary);
 }
-.menu__item {
+.nav__item {
   padding: 24px 15px;
   font-size: 24px;
   border-bottom: 1px solid var(--border-color-primary);

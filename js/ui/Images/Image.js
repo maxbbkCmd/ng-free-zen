@@ -1,6 +1,6 @@
 /**
  * @typedef {import('./types').ImageData} ImageData
-*/
+ */
 
 /**
  * @function Image
