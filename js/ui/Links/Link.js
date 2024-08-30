@@ -13,8 +13,8 @@ import { iconGoogle } from '../Icons/IconGoogle/IconGoogle.js';
  */
 
 export const Link = (data, className) => `
-<a class="${className}" href="${data.url}">
-  ${data.name === 'Apple' ? iconApple() : ''}
-  ${data.name === 'Google' ? iconGoogle() : ''}
-</a>
+  <a class="${className}" href="${data.url}">
+    ${data.name === 'Apple' ? iconApple() : ''}
+    ${data.name === 'Google' ? iconGoogle() : ''}
+  </a>
 `;
