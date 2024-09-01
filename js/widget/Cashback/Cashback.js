@@ -1,5 +1,5 @@
-import { Button } from "../../ui/Button/Button.js";
-import { Title } from "../../ui/Title/Title.js";
+import { Button } from '../../ui/Button/Button.js';
+import { Title } from '../../ui/Title/Title.js';
 
 /**
  * @typedef {import('./types').CashbackData} CashbackData
@@ -19,7 +19,7 @@ export const Cashback = (data) => {
         <div class="cashback__text-block">
           ${Title(title, 'cashback__title')}
           ${texts.map((text) => `<p class="cashback__copy">${text}</p>`).join('')}
-          ${Button(buttonText, 'cashback__button', 'order-open', 'type')}
+          ${Button(buttonText, 'cashback__button', 'order-open', 'button')}
         </div>
       </div>
     </section>
