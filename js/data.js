@@ -209,43 +209,65 @@ export const data = {
         name: 'Discover',
         links: [
           {
-            name: 'For developers',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'For developers',
+            },
           },
           {
-            name: 'Apple Pay',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Apple Pay',
+            },
           },
           {
-            name: 'Google Pay',
             url: 'https://example.com',
-          },
+            content: {
+              type: 'text',
+              data: 'Google Pay',
+            },
+          }
         ],
       },
       {
         name: 'Offer',
         links: [
           {
-            name: 'Business',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Business',
+            },
           },
           {
-            name: 'Personal',
             url: 'https://example.com',
-          },
+            content: {
+              type: 'text',
+              data: 'Personal',
+            },
+          }
         ],
       },
       {
         name: 'Language',
         links: [
+
           {
-            name: 'English',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'English',
+            },
           },
           {
-            name: 'Polish',
             url: 'https://example.com',
-          },
+            content: {
+              type: 'text',
+              data: 'Polish',
+            },
+          }
         ],
       },
       {

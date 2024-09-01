@@ -22,9 +22,9 @@ export const Download = (data) => {
           ${texts
             .map((text) => `<p class="download__copy">${text}</p>`)
             .join('')}
-            <div class="download__links">
-              ${links.map((link) => Link(link, 'download__link')).join('')}
-            </div>
+          <div class="download__links">
+            ${links.map((link) => Link(link, 'download__link')).join('')}
+          </div>
         </div>
         <div class="download__image-block">
           ${Image(images)}

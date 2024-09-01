@@ -1,5 +1,5 @@
-import { Button } from '../../ui/Button/Button.js';
-import { Title } from '../../ui/Title/Title.js';
+import { Button } from '../../ui/Button/index.js';
+import { Title } from '../../ui/Title/index.js';
 
 /**
  * @typedef {import('./types').CashbackData} CashbackData
@@ -12,7 +12,7 @@ import { Title } from '../../ui/Title/Title.js';
  */
 
 export const Cashback = (data) => {
-  const {title, texts, buttonText } = data;
+  const { title, texts, buttonText } = data;
   return `
     <section class="cashback" id="cashback">
       <div class="cashback__wrapper">
