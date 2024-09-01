@@ -107,57 +107,57 @@ export const data = {
       {
         name: 'Rosegal',
         logo: {
-          lightSource: '.assets/brands/light/1.svg',
-          darkSource: '.assets/brands/dark/1.svg',
+          lightSource: '../../assets/brands/light/1.svg',
+          darkSource: '../../assets/brands/dark/1.svg',
         },
       },
       {
         name: 'Geabest',
         logo: {
-          lightSource: '.assets/brands/light/2.svg',
-          darkSource: '.assets/brands/dark/2.svg',
+          lightSource: '../../assets/brands/light/2.svg',
+          darkSource: '../../assets/brands/dark/2.svg',
         },
       },
       {
         name: 'Allegro',
         logo: {
-          lightSource: '.assets/brands/light/3.svg',
-          darkSource: '.assets/brands/dark/3.svg',
+          lightSource: '../../assets/brands/light/3.svg',
+          darkSource: '../../assets/brands/dark/3.svg',
         },
       },
       {
         name: 'Aliexpress',
         logo: {
-          lightSource: '.assets/brands/light/4.svg',
-          darkSource: '.assets/brands/dark/4.svg',
+          lightSource: '../../assets/brands/light/4.svg',
+          darkSource: '../../assets/brands/dark/4.svg',
         },
       },
       {
         name: 'Booking',
         logo: {
-          lightSource: '.assets/brands/light/5.svg',
-          darkSource: '.assets/brands/dark/5.svg',
+          lightSource: '../../assets/brands/light/5.svg',
+          darkSource: '../../assets/brands/dark/5.svg',
         },
       },
       {
         name: 'Media Markt',
         logo: {
-          lightSource: '.assets/brands/light/6.svg',
-          darkSource: '.assets/brands/dark/6.svg',
+          lightSource: '../../assets/brands/light/6.svg',
+          darkSource: '../../assets/brands/dark/6.svg',
         },
       },
       {
         name: 'Rtv Euro Agd',
         logo: {
-          lightSource: '.assets/brands/light/7.svg',
-          darkSource: '.assets/brands/dark/7.svg',
+          lightSource: '../../assets/brands/light/7.svg',
+          darkSource: '../../assets/brands/dark/7.svg',
         },
       },
       {
         name: 'Groupon',
         logo: {
-          lightSource: '.assets/brands/light/8.svg',
-          darkSource: '.assets/brands/dark/8.svg',
+          lightSource: '../../assets/brands/light/8.svg',
+          darkSource: '../../assets/brands/dark/8.svg',
         },
       },
     ],

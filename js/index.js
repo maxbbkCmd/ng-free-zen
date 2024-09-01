@@ -8,6 +8,7 @@ import { Download } from './widget/Download/Download.js';
 import { Warranty } from './widget/Warranty/Warranty.js';
 import { Care } from './widget/Care/Care.js';
 import { Cashback } from './widget/Cashback/Cashback.js';
+import { Clients } from './widget/Clients/Clients.js';
 
 const $root = document.querySelector('#root');
 
@@ -16,6 +17,7 @@ $root.insertAdjacentHTML('beforeend', Download(data.download));
 $root.insertAdjacentHTML('beforeend', Warranty(data.warranty));
 $root.insertAdjacentHTML('beforeend', Care(data.care));
 $root.insertAdjacentHTML('beforeend', Cashback(data.cashback));
+$root.insertAdjacentHTML('beforeend', Clients(data.clients));
 
 // DOM
 const $themeButton = document.querySelector('#theme');
