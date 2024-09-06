@@ -74,7 +74,7 @@ export const data = {
   },
 
   care: {
-    title:{
+    title: {
       content: 'ZEN Care',
       priority: 2,
     },
@@ -228,7 +228,7 @@ export const data = {
               type: 'text',
               data: 'Google Pay',
             },
-          }
+          },
         ],
       },
       {
@@ -247,13 +247,12 @@ export const data = {
               type: 'text',
               data: 'Personal',
             },
-          }
+          },
         ],
       },
       {
         name: 'Language',
         links: [
-
           {
             url: 'https://example.com',
             content: {
@@ -267,7 +266,7 @@ export const data = {
               type: 'text',
               data: 'Polish',
             },
-          }
+          },
         ],
       },
       {
@@ -296,6 +295,13 @@ export const data = {
       },
     ],
     info: {
+      logo: {
+        url: 'https://example.com1',
+        content: {
+          type: 'image',
+          data: './assets/icon/info-logo.svg',
+        },
+      },
       texts: [
         'ZEN is a licensed financial institution under the supervision of the Central Bank of Lithuania approved by European Banking Authority for 31 countries.',
         'Registration number of the company 304749651, VAT ID LT100011714916.',
@@ -305,7 +311,7 @@ export const data = {
         'Sales Office: ul. Emilii Plater 53, 00-113 Warsaw, Poland.',
       ],
       developer: {
-        url: 'https://example.com',
+        url: 'https://example.com/developer',
         content: {
           type: 'image',
           data: './assets/icon/developer.svg',

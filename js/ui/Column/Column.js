@@ -18,7 +18,8 @@ export const Column = (data) => {
         <li class="column__item">
           <a href="${link.url}">
             ${link.content.type === 'image'
-            ? `<img src="${link.content.data}" alt="${data.name}" />`: link.content.data}
+            ? `<img src="${link.content.data}" alt="${data.name}" />`
+            : link.content.data}
           </a>
         </li>`).join('')}
     </ul>

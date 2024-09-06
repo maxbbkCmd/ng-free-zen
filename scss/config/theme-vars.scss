@@ -1,8 +1,8 @@
-.app {
+.root {
   &.light {
     // color:
     --color-primary: #000;
-    
+
     // bg-color:
     --bg-color-primary: #fff;
 
@@ -15,11 +15,11 @@
     //bg-modal:
     --bg-color-modal: #fff;
   }
-  
+
   &.dark {
     // color:
     --color-primary: #fff;
-    
+
     // bg-color:
     --bg-color-primary: #484848;
 

@@ -10,7 +10,7 @@
 
 export const Developer = (data) => {
   return `
-  <a class="footer__dev" href="https://exaple.com">
+  <a class="footer__dev" href="${data.developer.url}">
     <img src="${data.developer.content.data}" alt="Developer">
   </a>
   `;
