@@ -20,8 +20,8 @@ export const Footer = (data) => {
         ${categories.map((category) => Column(category)).join('')}
       </div>
       <div class="footer__info">
-        <a class="footer__logo" href="https://exaple.com">
-          <img src="/assets/icon/logo2.svg" alt="ZEN logo">
+        <a class="footer__logo" href="${info.logo.url}">
+          <img src="${info.logo.content.data}" alt="ZEN logo">
         </a>
         ${info.texts
           .map((text) => `<p class="footer__copy">${text}</p>`)
