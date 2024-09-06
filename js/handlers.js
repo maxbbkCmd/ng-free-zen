@@ -1,40 +1,33 @@
-import { generateSunIcon } from './ui/generateSunIcon.js';
-import { generateMoonIcon } from './ui/generateMoonIcon.js';
+import { IconSun } from './ui/Icons/IconSun/index.js';
+import { IconMoon } from './ui/Icons/IconMoon/index.js';
 
-// DOM
+/**
+ * @typedef {import('./widget/Clients/types').ClientsData} ClientsData
+ */
+
+/**
+ * @function handleThemeBtnClick
+ * @description In anonymous handler
+ * @param {Event} event
+ * /@param {ClientsData} clientsData
+ */
+
 const $app = document.querySelector('#app');
-const $modalOrder = document.querySelector('#modal-order');
-const $menu = document.querySelector('#menu');
 
-// Обработчики:
-// - смена иконки темы
 export const handleThemeBtnClick = (event) => {
+
   const $themeButton = event.currentTarget;
   const theme = $themeButton.dataset.theme;
   if (theme === 'light') {
     $themeButton.dataset.theme = 'dark';
-    $themeButton.innerHTML = generateSunIcon();
+    $themeButton.innerHTML = IconSun();
     $app.classList.add('dark');
     $app.classList.remove('light');
   }
   if (theme === 'dark') {
     $themeButton.dataset.theme = 'light';
-    $themeButton.innerHTML = generateMoonIcon();
+    $themeButton.innerHTML = IconMoon();
     $app.classList.add('light');
     $app.classList.remove('dark');
   }
-};
-
-// - открытие/закрытие модального окна
-export const handleOrderOpenBtnClick = () => {
-  $modalOrder.classList.add('active');
-};
-
-export const handleOrderCloseBtnClick = () => {
-  $modalOrder.classList.remove('active');
-};
-
-// - открытие/закрытие меню
-export const handleBurgerBtnClick = () => {
-  $menu.classList.toggle('active');
 };

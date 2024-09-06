@@ -1,4 +1,4 @@
-import { Title } from '../../ui/Title/Title.js';
+import { Title } from '../../ui/Title/index.js';
 import { Image } from '../../ui/Images/index.js';
 
 /**

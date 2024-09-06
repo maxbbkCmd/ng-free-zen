@@ -74,7 +74,7 @@ export const data = {
   },
 
   care: {
-    title:{
+    title: {
       content: 'ZEN Care',
       priority: 2,
     },
@@ -209,16 +209,25 @@ export const data = {
         name: 'Discover',
         links: [
           {
-            name: 'For developers',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'For developers',
+            },
           },
           {
-            name: 'Apple Pay',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Apple Pay',
+            },
           },
           {
-            name: 'Google Pay',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Google Pay',
+            },
           },
         ],
       },
@@ -226,12 +235,18 @@ export const data = {
         name: 'Offer',
         links: [
           {
-            name: 'Business',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Business',
+            },
           },
           {
-            name: 'Personal',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Personal',
+            },
           },
         ],
       },
@@ -239,12 +254,18 @@ export const data = {
         name: 'Language',
         links: [
           {
-            name: 'English',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'English',
+            },
           },
           {
-            name: 'Polish',
             url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Polish',
+            },
           },
         ],
       },
@@ -274,6 +295,13 @@ export const data = {
       },
     ],
     info: {
+      logo: {
+        url: 'https://example.com1',
+        content: {
+          type: 'image',
+          data: './assets/icon/info-logo.svg',
+        },
+      },
       texts: [
         'ZEN is a licensed financial institution under the supervision of the Central Bank of Lithuania approved by European Banking Authority for 31 countries.',
         'Registration number of the company 304749651, VAT ID LT100011714916.',
@@ -283,7 +311,7 @@ export const data = {
         'Sales Office: ul. Emilii Plater 53, 00-113 Warsaw, Poland.',
       ],
       developer: {
-        url: 'https://example.com',
+        url: 'https://example.com/developer',
         content: {
           type: 'image',
           data: './assets/icon/developer.svg',

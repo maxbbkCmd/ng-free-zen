@@ -87,14 +87,14 @@ img {
   width: 100%;
 }
 
-.app.light {
+.root.light {
   --color-primary: #000;
   --bg-color-primary: #fff;
   --border-color-primary: #aaa;
   --bg-color-links: #222;
   --bg-color-modal: #fff;
 }
-.app.dark {
+.root.dark {
   --color-primary: #fff;
   --bg-color-primary: #484848;
   --border-color-primary: #fff;
