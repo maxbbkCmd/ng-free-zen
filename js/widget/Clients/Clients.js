@@ -16,7 +16,7 @@ export const Clients = (data) => {
       <ul class="clients__brands">
         ${brands.map((brand) => `
           <li class="clients__brand">
-            <img src="${brand.logo.lightSource}" alt="${brand.logo.darkSource}">
+            <img src="${brand.logo.lightSource}" alt="${brand.name}">
           </li>
           `).join('')}
       </ul>

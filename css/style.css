@@ -75,7 +75,7 @@ body {
   font-weight: 400;
 }
 
-.app {
+.root {
   background: var(--bg-color-primary);
 }
 
@@ -87,14 +87,15 @@ img {
   width: 100%;
 }
 
-.root.light {
+.root[data-theme=light] {
   --color-primary: #000;
   --bg-color-primary: #fff;
   --border-color-primary: #aaa;
   --bg-color-links: #222;
   --bg-color-modal: #fff;
 }
-.root.dark {
+
+.root[data-theme=dark] {
   --color-primary: #fff;
   --bg-color-primary: #484848;
   --border-color-primary: #fff;

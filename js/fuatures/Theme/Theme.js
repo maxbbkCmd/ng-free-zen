@@ -10,7 +10,7 @@ export const Theme = (className) => `
     type="button"
     id="theme"
     data-theme="light"
-    >
-      <img src="./assets/icon/moon.svg" alt="theme">
+  >
+    <img src="./assets/icon/moon.svg" alt="theme">
   </button>
 `;

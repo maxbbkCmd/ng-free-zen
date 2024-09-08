@@ -6,7 +6,7 @@ import { Care } from './widget/Care/Care.js';
 import { Cashback } from './widget/Cashback/Cashback.js';
 import { Clients } from './widget/Clients/Clients.js';
 import { Footer } from './widget/Footer/Footer.js';
-import { handleThemeBtnClick } from './handlers.js';
+import { onThemeClick } from './handlers.js';
 
 const $root = document.querySelector('#root');
 
@@ -18,7 +18,6 @@ $root.insertAdjacentHTML('beforeend', Cashback(data.cashback));
 $root.insertAdjacentHTML('beforeend', Clients(data.clients));
 $root.insertAdjacentHTML('beforeend', Footer(data.secondaryInfo));
 
-
 const $themeButton = document.querySelector('#theme')
+$themeButton?.addEventListener('click', (event) => onThemeClick(event, data.clients.brands));
 
-$themeButton.addEventListener('click', handleThemeBtnClick);
