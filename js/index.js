@@ -7,6 +7,7 @@ import { Cashback } from './widget/Cashback/Cashback.js';
 import { Clients } from './widget/Clients/Clients.js';
 import { Footer } from './widget/Footer/Footer.js';
 import { onThemeClick } from './handlers.js';
+import { handleLogoClick } from './handlers.js';
 
 const $root = document.querySelector('#root');
 
@@ -20,4 +21,7 @@ $root.insertAdjacentHTML('beforeend', Footer(data.secondaryInfo));
 
 const $themeButton = document.querySelector('#theme')
 $themeButton?.addEventListener('click', (event) => onThemeClick(event, data.clients.brands));
+
+const $logo = document.querySelector('#logo');
+$logo.addEventListener('click', handleLogoClick);
 

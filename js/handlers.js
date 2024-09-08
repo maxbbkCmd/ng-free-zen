@@ -41,3 +41,15 @@ export const onThemeClick = (event, brandsFromAPI) => {
     })
   }
 };
+
+/**
+ * @function handleLogoClick
+ * @returns {void}
+ */
+
+export const handleLogoClick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
