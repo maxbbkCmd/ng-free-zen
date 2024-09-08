@@ -50,6 +50,20 @@ export const onThemeClick = (event, brandsFromAPI) => {
 export const handleLogoClick = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   });
+};
+
+
+/**
+ * @function handleBurgerClick
+ * @returns {void}
+ */
+
+export const handleBurgerClick = () => {
+  const $nav = document.querySelector('#nav');
+  const $burger = document.querySelector('#burger');
+
+  $nav.classList.toggle('active');
+  $burger.classList.toggle('active');
 };
