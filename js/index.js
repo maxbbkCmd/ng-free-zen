@@ -8,6 +8,7 @@ import { Clients } from './widget/Clients/Clients.js';
 import { Footer } from './widget/Footer/Footer.js';
 import { onThemeClick } from './handlers.js';
 import { handleLogoClick } from './handlers.js';
+import { handleBurgerClick } from './handlers.js';
 
 const $root = document.querySelector('#root');
 
@@ -24,4 +25,7 @@ $themeButton?.addEventListener('click', (event) => onThemeClick(event, data.clie
 
 const $logo = document.querySelector('#logo');
 $logo.addEventListener('click', handleLogoClick);
+
+const $burger = document.querySelector('#burger');
+$burger.addEventListener('click', handleBurgerClick);
 
