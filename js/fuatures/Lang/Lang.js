@@ -6,10 +6,10 @@ import { Select } from '../../ui/Select/Select.js';
 
 /**
  * @function Lang
- * @param {string[]} data
+ * @param {LangsData[]} data
  * @returns {string} HTML
  */
 
 export const Lang = (data) => `
-    ${Select(data.langs)}
+    ${Select(data)}
 `;

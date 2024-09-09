@@ -1,7 +1,12 @@
-
 {
   "env": { "browser": true, "es2022": true, "node": true },
-  "parserOptions": { "sourceType": "module", "ecmaVersion": "latest" },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "eqeqeq": ["error", "always"],
     "no-loop-func": ["error"],
@@ -9,9 +14,7 @@
     "no-unmodified-loop-condition": ["error"],
     "no-useless-concat": ["error"],
     "curly": ["error", "multi-line", "consistent"],
-    "consistent-return": ["error"],
     "no-return-await": ["error"],
-    "arrow-body-style": ["error", "as-needed"],
     "arrow-parens": ["error", "always"],
     "arrow-spacing": ["error"],
     "no-useless-computed-key": ["error"],
@@ -61,12 +64,11 @@
         "overrides": { "function": { "after": false } }
       }
     ],
-    "linebreak-style": ["error", "unix"],
-    "max-len": ["error", { "code": 180, "ignoreUrls": true, "ignoreTemplateLiterals": true }],
+    "max-len": ["error", { "code": 180, "ignoreUrls": true }],
     "max-nested-callbacks": ["error", { "max": 5 }],
     "new-cap": [
       "error",
-      { "newIsCap": true, "capIsNew": false, "properties": false }
+      { "newIsCap": true, "capIsNew": true, "properties": true }
     ],
     "new-parens": ["error"],
     "no-lonely-if": ["error"],
@@ -94,20 +96,9 @@
       "error",
       { "words": true, "nonwords": false, "overrides": { "typeof": false } }
     ],
-    "no-extra-parens": [
-      "error",
-      "all",
-      {
-        "returnAssign": false,
-        "nestedBinaryExpressions": false,
-        "enforceForArrowConditionals": false
-      }
-    ],
+    "no-extra-parens": "off",
     "no-shadow-restricted-names": ["error"],
     "no-use-before-define": ["error", { "functions": false }],
-    "no-unused-vars": [
-      "error",
-      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
-    ]
+    "no-unused-vars": "off"
   }
 }

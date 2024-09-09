@@ -1,17 +1,17 @@
 /**
- * @typedef {import('./types').DeveloperData} DeveloperData
+ * @typedef {import('./types').InfoData} InfoData
  */
 
 /**
  * @function Developer
- * @param {DeveloperData} data
+ * @param {InfoData} info
  * @returns {string} HTML
  */
 
-export const Developer = (data) => {
+export const Developer = (info) => {
   return `
-  <a class="footer__dev" href="${data.developer.url}">
-    <img src="${data.developer.content.data}" alt="Developer">
+  <a class="footer__dev" href="${info.developer.url}">
+    <img src="${info.developer.content.data}" alt="Developer">
   </a>
   `;
 };

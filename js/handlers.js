@@ -9,19 +9,22 @@ import { IconMoon } from './ui/Icons/IconMoon/index.js';
  * @function handleThemeBtnClick
  * @description In anonymous handler
  * @param {Event} event
- * @param {ClientsData} brandsFromAPI
+ * @param {{ name: string; logo: { lightSource: string; darkSource: string; } }[]} brandsFromAPI
  */
 
 export const onThemeClick = (event, brandsFromAPI) => {
   /**@type {NodeListOf<HTMLImageElement>} */
+  const $brandNodes = document.querySelectorAll('.clients__brand img');
+
+  /**@type {HTMLElement | null} */
   const $root = document.querySelector('#root');
 
-  const $brandNodes = document.querySelectorAll('.clients__brand img');
-  const $themeButton = /**@type {HTMLElement | null} */ event.currentTarget;
   /**@type {HTMLElement | null} */
-  const theme = $themeButton.dataset.theme;
+  const $themeButton = /**@type {HTMLElement} */ (event.currentTarget);
 
-  if (!$brandNodes || !$themeButton || !theme)  return;
+  const theme =  $themeButton?.dataset.theme;
+
+  if (!$root || !$brandNodes || !theme)  return;
 
   if (theme === 'light') {
     $themeButton.dataset.theme = 'dark';
@@ -64,6 +67,6 @@ export const handleBurgerClick = () => {
   const $nav = document.querySelector('#nav');
   const $burger = document.querySelector('#burger');
 
-  $nav.classList.toggle('active');
-  $burger.classList.toggle('active');
+  $nav?.classList.toggle('active');
+  $burger?.classList.toggle('active');
 };

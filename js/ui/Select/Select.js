@@ -6,7 +6,7 @@ import { IconArrow } from '../../ui/Icons/IconArrow/IconArrow.js';
 
 /**
  * @function Select
- * @param {string[]} data
+ * @param {SelectData[]} data
  * @returns {string} HTML
  */
 

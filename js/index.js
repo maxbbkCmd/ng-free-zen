@@ -12,20 +12,20 @@ import { handleBurgerClick } from './handlers.js';
 
 const $root = document.querySelector('#root');
 
-$root.insertAdjacentHTML('beforeend', Header(data.primaryInfo));
-$root.insertAdjacentHTML('beforeend', Download(data.download));
-$root.insertAdjacentHTML('beforeend', Warranty(data.warranty));
-$root.insertAdjacentHTML('beforeend', Care(data.care));
-$root.insertAdjacentHTML('beforeend', Cashback(data.cashback));
-$root.insertAdjacentHTML('beforeend', Clients(data.clients));
-$root.insertAdjacentHTML('beforeend', Footer(data.secondaryInfo));
+$root?.insertAdjacentHTML('beforeend', Header(data.primaryInfo));
+$root?.insertAdjacentHTML('beforeend', Download(data.download));
+$root?.insertAdjacentHTML('beforeend', Warranty(data.warranty));
+$root?.insertAdjacentHTML('beforeend', Care(data.care));
+$root?.insertAdjacentHTML('beforeend', Cashback(data.cashback));
+$root?.insertAdjacentHTML('beforeend', Clients(data.clients));
+$root?.insertAdjacentHTML('beforeend', Footer(data.secondaryInfo));
 
 const $themeButton = document.querySelector('#theme')
 $themeButton?.addEventListener('click', (event) => onThemeClick(event, data.clients.brands));
 
 const $logo = document.querySelector('#logo');
-$logo.addEventListener('click', handleLogoClick);
+$logo?.addEventListener('click', handleLogoClick);
 
 const $burger = document.querySelector('#burger');
-$burger.addEventListener('click', handleBurgerClick);
+$burger?.addEventListener('click', handleBurgerClick);
 

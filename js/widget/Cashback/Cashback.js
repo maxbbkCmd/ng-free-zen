@@ -7,7 +7,7 @@ import { Title } from '../../ui/Title/index.js';
 
 /**
  * @function Cashback
- * @param {Cashback} data
+ * @param {CashbackData} data
  * @returns {string} HTML
  */
 

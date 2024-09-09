@@ -23,7 +23,7 @@ export const Header = (data) => `
       </nav>
       <div class="header__actions">
         <label class="header__lang">
-          ${Lang(data)}
+          ${Lang(data.langs)}
         </label>
         ${Theme('header__theme')}
         ${Burger('burger')}

@@ -8,22 +8,23 @@ type LinkData = {
   content: ContentData;
 };
 
-type DeveloperData = {
-  url: string;
-  content: LinkData;
-};
-
-type InfoData = {
-  texts: string[];
-  developer: DeveloperData;
-};
-
 type CategoryData = {
   name: string;
   links: LinkData[];
 };
 
-export type FooterData = {
-  categories: CategoryData;
+type LogoData = {
+  url: string;
+  content: ContentData;
+};
+
+export type InfoData = {
+  logo: LogoData;
+  texts: string[];
+  developer: LogoData;
+};
+
+export type SecondaryInfoData = {
+  categories: CategoryData[];
   info: InfoData;
 };

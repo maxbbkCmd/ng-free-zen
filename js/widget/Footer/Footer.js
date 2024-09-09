@@ -2,12 +2,12 @@ import { Column } from '../../ui/Column/index.js';
 import { Developer } from '../../ui/Developer/index.js';
 
 /**
- * @typedef {import('./types').FooterData} FooterData
+ * @typedef {import('./types').SecondaryInfoData} SecondaryInfoData
  */
 
 /**
  * @function Footer
- * @param {FooterData} data
+ * @param {SecondaryInfoData} data
  * @returns {string} HTML
  */
 
