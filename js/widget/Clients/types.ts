@@ -1,13 +1,13 @@
-export type ClientsData = {
-  brands: BrandsData[];
+type LogoData = {
+  lightSource: string;
+  darkSource: string;
 };
 
-export type BrandsData = {
+export type BrandData = {
   name: string;
   logo: LogoData;
 };
 
-type LogoData = {
-  lightSource: string;
-  darkSource: string;
+export type ClientsData = {
+  brands: BrandData[];
 };

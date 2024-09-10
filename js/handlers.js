@@ -2,19 +2,19 @@ import { IconSun } from './ui/Icons/IconSun/index.js';
 import { IconMoon } from './ui/Icons/IconMoon/index.js';
 
 /**
- * @typedef {import('./widget/Clients/types').ClientsData} ClientsData
+ * @typedef {import('./widget/Clients/types').BrandData} BrandData
  */
 
 /**
  * @function handleThemeBtnClick
  * @description In anonymous handler
  * @param {Event} event
- * @param {{ name: string; logo: { lightSource: string; darkSource: string; } }[]} brandsFromAPI
+ * @param {BrandData[]} brandsFromAPI
  */
 
 export const onThemeClick = (event, brandsFromAPI) => {
   /**@type {NodeListOf<HTMLImageElement>} */
-  const $brandNodes = document.querySelectorAll('.clients__brand img');
+  const $brandNodes = document.querySelectorAll('[data-id="brand"]');
 
   /**@type {HTMLElement | null} */
   const $root = document.querySelector('#root');
