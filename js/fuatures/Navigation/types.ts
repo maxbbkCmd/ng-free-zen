@@ -1,4 +1,1 @@
-export type NavItemData = {
-  name: string;
-  anchor: string;
-};
+export type { NavItemData } from '../../typesGlobal';

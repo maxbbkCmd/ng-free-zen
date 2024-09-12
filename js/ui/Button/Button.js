@@ -1,10 +1,6 @@
 /**
- * @typedef {import('./types').ButtonData} ButtonData
- */
-
-/**
  * @function Button
- * @param {ButtonData} data
+ * @param {string} data
  * @param {string} className
  * @param {string} id
  * @param {string} type
