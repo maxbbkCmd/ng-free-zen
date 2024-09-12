@@ -2,7 +2,7 @@ import { IconSun } from './ui/Icons/IconSun/index.js';
 import { IconMoon } from './ui/Icons/IconMoon/index.js';
 
 /**
- * @typedef {import('./widget/Clients/types').BrandData} BrandData
+ * @typedef {import('./typesGlobal.js').BrandData} BrandData
  */
 
 /**
