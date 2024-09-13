@@ -1,1 +1,1 @@
-export type { HeaderData } from '../../typesGlobal';
+export type { HeaderData } from '../../types';

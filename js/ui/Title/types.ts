@@ -1,1 +1,1 @@
-export type { TitleData } from '../../typesGlobal';
+export type { TitleData } from '../../types';

@@ -1,21 +1,6 @@
-// Header
-export type LangsData = {
-  name: string;
-  key: string;
-};
-
-export type NavItemData = {
-  name: string;
-  anchor: string;
-};
-
-export type HeaderData = {
-  langs: LangsData[];
-  navigation: NavItemData[];
-};
-
-
-// Download
+/**********************************************
+  Care types
+**********************************************/
 export type TitleData = {
   content: string;
   priority: number;
@@ -31,6 +16,28 @@ type ImageData = {
   description: string;
 };
 
+/**********************************************
+  Header
+**********************************************/
+export type LangsData = {
+  name: string;
+  key: string;
+};
+
+export type NavItemData = {
+  name: string;
+  anchor: string;
+};
+
+export type HeaderData = {
+  langs: LangsData[];
+  navigation: NavItemData[];
+};
+
+/**********************************************
+  Download
+**********************************************/
+
 export type DownloadData = {
   title: TitleData;
   texts: string[];
@@ -38,32 +45,36 @@ export type DownloadData = {
   images: ImageData;
 };
 
-// Warranty
-
+/**********************************************
+  Warranty
+**********************************************/
 export type WarrantyData = {
   title: TitleData;
   texts: string[];
   images: ImageData;
 };
 
-// Care
-
+/**********************************************
+  Care
+**********************************************/
 export type CareData = {
   title: TitleData;
   texts: string[];
   images: ImageData;
 };
 
-// Cashback
-
+/**********************************************
+  Cashback
+**********************************************/
 export type CashbackData = {
   title: TitleData;
   texts: string[];
   buttonText: string;
 };
 
-// Clients
-
+/**********************************************
+  Clients
+**********************************************/
 type LogoData = {
   lightSource: string;
   darkSource: string;
@@ -78,8 +89,9 @@ export type ClientsData = {
   brands: BrandData[];
 };
 
-// Footer
-
+/**********************************************
+  Footer
+**********************************************/
 type ContentData = {
   type: string;
   data: string;
@@ -90,7 +102,7 @@ type InfoLinkData = {
   content: ContentData;
 };
 
-type CategoryData = {
+export type CategoryData = {
   name: string;
   links: InfoLinkData[];
 };
@@ -111,8 +123,9 @@ export type SecondaryInfoData = {
   info: InfoData;
 };
 
-// AppData
-
+/**********************************************
+  App
+**********************************************/
 export type AppData = {
   primaryInfo: HeaderData;
   download: DownloadData;

@@ -1,1 +1,1 @@
-export type { NavItemData } from '../../typesGlobal';
+export type { NavItemData } from '../../types';

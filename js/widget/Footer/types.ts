@@ -1,1 +1,1 @@
-export type { SecondaryInfoData } from '../../typesGlobal';
+export type { SecondaryInfoData } from '../../types';

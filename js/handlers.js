@@ -2,7 +2,7 @@ import { IconSun } from './ui/Icons/IconSun/index.js';
 import { IconMoon } from './ui/Icons/IconMoon/index.js';
 
 /**
- * @typedef {import('./typesGlobal.js').BrandData} BrandData
+ * @typedef {import('./types.js').BrandData} BrandData
  */
 
 /**
@@ -51,12 +51,18 @@ export const onThemeClick = (event, brandsFromAPI) => {
  */
 
 export const handleLogoClick = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
+  // window.scrollTo({
+  //   top: 0,
+  //   behavior: 'smooth',
+  // });
+  fetch('https://ng-free-zen-default-rtdb.firebaseio.com/.json')
+  .then((response) => {
+    return response.json();
+  })
+  .then((responseData) => {
+    console.log(responseData)
+  })
 };
-
 
 /**
  * @function handleBurgerClick
