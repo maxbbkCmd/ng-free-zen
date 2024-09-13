@@ -1,1 +1,1 @@
-export type { CashbackData } from '../../typesGlobal';
+export type { CashbackData } from '../../types';

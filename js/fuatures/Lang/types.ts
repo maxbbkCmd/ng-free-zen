@@ -1,1 +1,1 @@
-export type { LangsData } from '../../typesGlobal';
+export type { LangsData } from '../../types';
