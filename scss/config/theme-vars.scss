@@ -1,4 +1,4 @@
-.root[data-theme="light"] {
+.root.light {
   // color:
   --color-primary: #000;
 
@@ -15,7 +15,7 @@
   --bg-color-modal: #fff;
   }
 
-.root[data-theme="dark"] {
+.root.dark {
   // color:
   --color-primary: #fff;
 

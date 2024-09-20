@@ -18,7 +18,6 @@ import { Footer } from './widget/index.js';
 */
 
 export const App = (data) => {
-
   return `
     ${Header(data.primaryInfo)}
     ${Download(data.download)}

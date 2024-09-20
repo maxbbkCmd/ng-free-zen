@@ -12,7 +12,7 @@ export const Navigation = (navList) => `
   <ul class="nav" id="nav">
     ${navList.map((navItem) => `
       <li class="nav__item">
-        <a href="#${navItem.anchor}">
+        <a href="${navItem.anchor}" data-id="burger-link">
           ${navItem.name}
         </a>
       </li>

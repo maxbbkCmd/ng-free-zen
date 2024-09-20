@@ -1,5 +1,12 @@
+import { addHandlers } from './addHandlers.js';
+import { App } from './App.js';
 import { IconSun } from './ui/Icons/IconSun/index.js';
 import { IconMoon } from './ui/Icons/IconMoon/index.js';
+import { API_BASE_URL } from './config.js';
+
+/**********************************************
+  Переключение темы
+**********************************************/
 
 /**
  * @typedef {import('./types.js').BrandData} BrandData
@@ -9,41 +16,43 @@ import { IconMoon } from './ui/Icons/IconMoon/index.js';
  * @function handleThemeBtnClick
  * @description In anonymous handler
  * @param {Event} event
- * @param {BrandData[]} brandsFromAPI
+ * @param {BrandData[]} responseData
+ * @returns {void}
  */
 
-export const onThemeClick = (event, brandsFromAPI) => {
+export const onThemeClick = (event, responseData) => {
   /**@type {NodeListOf<HTMLImageElement>} */
   const $brandNodes = document.querySelectorAll('[data-id="brand"]');
-
+  const $themeButton = /**@type {HTMLElement} */ (event.currentTarget);
   /**@type {HTMLElement | null} */
   const $root = document.querySelector('#root');
 
-  /**@type {HTMLElement | null} */
-  const $themeButton = /**@type {HTMLElement} */ (event.currentTarget);
+  const currentTheme = localStorage.getItem('currentTheme')
 
-  const theme =  $themeButton?.dataset.theme;
-
-  if (!$root || !$brandNodes || !theme)  return;
-
-  if (theme === 'light') {
-    $themeButton.dataset.theme = 'dark';
+  if (currentTheme === 'light') {
     $themeButton.innerHTML = IconSun();
-    $root.dataset.theme = 'dark';
+    $root?.classList.remove('light');
+    $root?.classList.add('dark');
+    localStorage.setItem('currentTheme', 'dark');
     $brandNodes.forEach((brand, index) => {
-      brand.src = brandsFromAPI[index].logo.darkSource;
+      brand.src = responseData[index].logo.darkSource;
     });
   }
 
-  if (theme === 'dark') {
-    $themeButton.dataset.theme = 'light';
+  if (currentTheme === 'dark') {
     $themeButton.innerHTML = IconMoon();
-    $root.dataset.theme = 'light';
+    $root?.classList.remove('dark');
+    $root?.classList.add('light');
+    localStorage.setItem('currentTheme', 'light');
     $brandNodes.forEach((brand, index) => {
-      brand.src = brandsFromAPI[index].logo.lightSource;
+      brand.src = responseData[index].logo.lightSource;
     })
   }
 };
+
+/**********************************************
+  Скрол по клику на лого
+**********************************************/
 
 /**
  * @function handleLogoClick
@@ -51,18 +60,15 @@ export const onThemeClick = (event, brandsFromAPI) => {
  */
 
 export const handleLogoClick = () => {
-  // window.scrollTo({
-  //   top: 0,
-  //   behavior: 'smooth',
-  // });
-  fetch('https://ng-free-zen-default-rtdb.firebaseio.com/.json')
-  .then((response) => {
-    return response.json();
-  })
-  .then((responseData) => {
-    console.log(responseData)
-  })
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 };
+
+/**********************************************
+  Открытие и закрытие бургера
+**********************************************/
 
 /**
  * @function handleBurgerClick
@@ -75,4 +81,58 @@ export const handleBurgerClick = () => {
 
   $nav?.classList.toggle('active');
   $burger?.classList.toggle('active');
+};
+
+/**********************************************
+  Закрытие бургера при скроле
+**********************************************/
+
+/**
+ * @function handleBurgerClose
+ * @param {???} event
+ * @returns {void}
+ */
+
+export const handleBurgerClose = (event) => {
+  event.preventDefault();
+
+  const targetId = event.target.getAttribute('href').substring(1);
+  const targetElement = document.getElementById(targetId);
+
+  if (targetElement) {
+    targetElement.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+  const $nav = document.querySelector('#nav');
+  const $burger = document.querySelector('#burger');
+
+  $nav?.classList.toggle('active');
+  $burger?.classList.toggle('active');
+};
+
+/**********************************************
+  Смена языка
+**********************************************/
+
+/**
+ * @function handleLangChange
+ * @return {Promise<void>}
+ */
+
+export const handleLangChange = async (event) => {
+  const currentLang = event.target.value;
+  localStorage.setItem('currentLang', currentLang);
+  const $root = document.querySelector('#root');
+  if (!$root) return;
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/${currentLang}.json`);
+    const responseData = await response.json();
+    $root.innerHTML = App(responseData);
+    addHandlers(responseData);
+  } catch (error) {
+    console.log('error', error);
+  }
 };
