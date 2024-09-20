@@ -26,5 +26,5 @@
   },
   "include": [
   "js/**/*"
-  ]
+, "_temp/data.js"  ]
 }

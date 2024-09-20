@@ -1,5 +1,5 @@
 /**********************************************
-  Care types
+  Common types
 **********************************************/
 export type TitleData = {
   content: string;

@@ -10,15 +10,17 @@ import { IconArrow } from '../../ui/Icons/IconArrow/IconArrow.js';
  * @returns {string} HTML
  */
 
-export const Select = (data) => `
+export const Select = (data) => {
+  const currentLang = localStorage.getItem('currentLang') ?? 'ru';
+
+  return `
   ${IconArrow()}
-  <select id="lang">
-  ${data.map((selectItem) => `
-    <option value="${selectItem.key}">${selectItem.name}</option>
-  `).join('')}
-</select>
-`;
-
-
-
-
+    <select id="lang">
+      ${data.map((selectItem) => `
+        <option value="${selectItem.key}" ${selectItem.key === currentLang ? 'selected' : ''}>
+          ${selectItem.name}
+        </option>
+      `).join('')}
+    </select>
+  `
+  };

@@ -73,6 +73,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 .root {
@@ -87,7 +88,7 @@ img {
   width: 100%;
 }
 
-.root[data-theme=light] {
+.root.light {
   --color-primary: #000;
   --bg-color-primary: #fff;
   --border-color-primary: #aaa;
@@ -95,7 +96,7 @@ img {
   --bg-color-modal: #fff;
 }
 
-.root[data-theme=dark] {
+.root.dark {
   --color-primary: #fff;
   --bg-color-primary: #484848;
   --border-color-primary: #fff;

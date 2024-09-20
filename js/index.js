@@ -1,19 +1,22 @@
-import { dataFromAPI } from './data.js';
+import { API_BASE_URL } from './config.js';
+import { addHandlers } from './addHandlers.js';
 import { App } from './App.js';
-import { onThemeClick } from './handlers.js';
-import { handleLogoClick } from './handlers.js';
-import { handleBurgerClick } from './handlers.js';
 
-const $root = document.querySelector('#root');
+( async () => {
+  const $root = document.querySelector('#root');
 
-$root?.insertAdjacentHTML('beforeend', App(dataFromAPI));
+  const currentLang = localStorage.getItem('currentLang') ?? 'ru';
+  const currentTheme = localStorage.getItem('currentTheme') ?? 'dark';
+  localStorage.setItem('currentLang', currentLang);
+  localStorage.setItem('currentTheme', currentTheme);
+  $root?.classList.add(currentTheme);
 
-const $themeButton = document.querySelector('#theme')
-$themeButton?.addEventListener('click', (event) => onThemeClick(event, dataFromAPI.clients.brands));
+  const response = await fetch(`${API_BASE_URL}/${currentLang}.json`);
+  const responseData = await response.json();
+  if ($root) $root.innerHTML = App(responseData);
 
-const $logo = document.querySelector('#logo');
-$logo?.addEventListener('click', handleLogoClick);
+  addHandlers(responseData);
+})();
 
-const $burger = document.querySelector('#burger');
-$burger?.addEventListener('click', handleBurgerClick);
+
 

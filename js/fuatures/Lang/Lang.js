@@ -10,6 +10,9 @@ import { Select } from '../../ui/Select/Select.js';
  * @returns {string} HTML
  */
 
-export const Lang = (data) => `
+export const Lang = (data) => {
+  return `
     ${Select(data)}
-`;
+  `;
+};
+
