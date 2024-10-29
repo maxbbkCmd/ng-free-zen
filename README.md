@@ -1,6 +1,14 @@
-# ng-free-zen
+- # ng-free-zen
 
--- My first project --  
+My first project, with the aim of improving the html css skill.
+
+## Описание
+
+- mobile version only
+- theme switching (light/dark)
+- language switching(RU/EN)
+
+## Технологии
 
 - HTML  
 - CSS  
