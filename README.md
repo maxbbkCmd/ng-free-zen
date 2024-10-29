@@ -14,3 +14,4 @@ My first project, with the aim of improving the html css skill.
 - CSS  
 - JavaScript
 - Sass
+- TypeScript
